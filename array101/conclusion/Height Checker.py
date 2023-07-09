@@ -16,10 +16,10 @@ class Solution:
         
         result = 0
         
-        sort_height = sorted(heights)
+        sort_heights = sorted(heights)
         
         for i in range(len(heights)):
-            if sort_height[i] != height:
+            if sort_heights[i] != heights[i]:
                 result += 1
                 
         return result

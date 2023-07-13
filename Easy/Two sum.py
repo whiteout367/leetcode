@@ -11,20 +11,12 @@ class Solution:
         -109 <= nums[i] <= 109
         -109 <= target <= 109
 
-        합이 타켓인 경우의 인덱스를 찾는 문제(투포인터를 사용)
+        합이 타켓인 경우의 인덱스를 찾는 문제(투포인터를 사용)(값이 안 나옴)
+        그냥 이중 for문
         """
-
-        i = 0
-        j = 1
-        result = []
-        while True:
-            if nums[i] + nums[j] == target:
-                result.append(i)
-                result.append(j)
-                return result
-                break
-            else:
-                if nums[i] + nums[j] > target:
-                    j += 1
-                else:
-                    i += 1
+        
+        for i in range(len(nums)):
+            for j in range(i+1,len(nums)):
+                if nums[i] + nums[j] == target:
+                    return list((i,j))
+            

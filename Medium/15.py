@@ -13,8 +13,6 @@ class Solution:
 
         fail
         """
-class Solution:
-	def threeSum(self, nums: List[int]) -> List[List[int]]:
         results = []
         nums.sort()
 
